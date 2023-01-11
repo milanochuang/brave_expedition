@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %} correct{% endblock %}
+
+
+
+{% block content %} 
+<h3>答錯了</h3>
+<form method= "post" action = "/incorrect" class="form-group">
+	{% csrf_token %}
+	<h4>再想想看</h4>
+		<div class="input-group-prepend">
+			<button type = "submit", name = 'tryagain' value= "tryagain" class="btn btn-success" > 再次挑戰 </button>
+		</div>	
+</form>
+
+{% endblock %}

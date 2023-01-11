@@ -1,0 +1,25 @@
+{% extends "main/base.html" %}
+{% block title%}View List{% endblock%}
+
+{% block content%}
+	<h3>{{ls.name}}</h3>
+	<form method = "post" action = "#">
+		{% csrf_token %}
+		{% for item in ls.item_set.all %}
+		<div class="input-group mb-3">
+			<div class = "input-group-prepend">
+				<div class = "input-group-text">
+				{% if item.complete == True %}
+					<input type="checkbox", value="clicked", name="c{{item.id}}" checked>
+				{%else%}
+					<input type="checkbox", value="clicked", name="c{{item.id}}">
+				{% endif %}
+				</div>
+			</div>
+			<p> {{item.text}} </p>
+		</div>	
+		{% endfor %}
+		<button type ="submit", name ="save", value="save", class="btn btn-success">決定好了！</button> 
+	</form>
+	
+{% endblock %}

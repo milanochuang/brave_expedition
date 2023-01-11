@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %} correct{% endblock %}
+
+
+
+{% block content %} 
+<h3>恭喜答對！</h3>
+<form method= "post" action = "/correct" class="form-group">
+	{% csrf_token %}
+	<h4>攻下此地！</h4>
+		<div class="input-group-prepend">
+			<button type = "submit", name = 'next' value= "next" class="btn btn-success" > 繼續冒險 </button>
+		</div>	
+</form>
+
+{% endblock %}
