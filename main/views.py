@@ -19,6 +19,7 @@ def maps(response):
 
 
 def question(response):
+    
     return render(response,"main/question.html",{})
 
 def index(response, id):

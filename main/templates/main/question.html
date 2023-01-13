@@ -1,20 +1,29 @@
 <html lang="en">
+{% extends 'main/base.html' %}
+
+
+{% block title %} correct{% endblock %}
+
+
+
+{% block content %} 
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    {% load static %} <link rel="stylesheet" type="text/css"
+    {% load static %} 
+    <link rel="stylesheet" type="text/css"
     href="/static/css/main.css?{% now "U" %}"/>
   </head>
   <body>
     <h1>Question 1</h1>
     <div class="box">
-      <a class="button" href="/22#">
+      <a href="/22#">
         今天這裡就會有第一則假新聞，講述一些假新聞，讓使用者猜一些假新聞</a
       >
       <br /><br /><br /><br />
-      <a class="button" href="#popup1"
+      <a href="#popup1"
         >今天這裡就會有第二則假新聞，講述一些假新聞，讓使用者猜一些假新聞</a
       >
     </div>
@@ -40,4 +49,5 @@
       </div>
     </div>
   </body>
+  {% endblock %}
 </html>
