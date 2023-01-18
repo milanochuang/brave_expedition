@@ -6,13 +6,119 @@
 
 
 {% block content %} 
-<h3>答錯了</h3>
-<form method= "post" action = "/incorrect" class="form-group">
-	{% csrf_token %}
-	<h4>再想想看</h4>
-		<div class="input-group-prepend">
-			<button type = "submit", name = 'tryagain' value= "tryagain" class="btn btn-success" > 再次挑戰 </button>
-		</div>	
-</form>
+<h3>似乎不是如此...</h3>
+<strong>別忘了，你可以使用技能。</strong>
+	<tbody><table><tr>
+		
+			<br>
+			這些技能可以幫助你找出討厭詭，只是...這需要付出一點代價
+			<br>
+			<td width="120">
+				<a href="#" type="button"  width="500" data-bs-toggle="modal" data-bs-target="#fairy">
+					<img src="https://i.imgur.com/Elk0IRa.png" width="60">
+				</a>
+				<br>精靈耳語
+			</td>
+			<br>
+			<td width="120">
+				<a href="#" type="button"  width="500" data-bs-toggle="modal" data-bs-target="#bless">
+					<img src="https://i.imgur.com/KFf0aoY.png" width="60">
+				</a>
+				<br>先知祝福
+				<br>
+			</td>
+			
+			<td width="120">
+				<a href="#" type="button"  width="500" data-bs-toggle="modal" data-bs-target="#skip">
+					<img src="https://i.imgur.com/gCZc12x.png" width="60">
+				</a>
+				<br>乾坤挪移
+			</td>
+			
+			<br>
+	</tbody></table></tr>
+	<a href="/22#">
+		<button type = "submit", name = 'tryagain' value= "tryagain" class="btn btn-success" > 再次挑戰 </button>
+	<a>	
 
+<!-- 精靈耳語 -->
+
+<div class="modal fade" id="fairy">
+	<div class="modal-dialog">
+	 <div class="modal-content">
+	<!-- Header -->
+		<div class="modal-header">
+		  <h3>精靈耳語</h3>
+	
+		  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+		</div>
+	<!-- Body -->  
+  
+	  <div class="modal-body">
+  
+		<center>
+		  <img src="https://i.imgur.com/Elk0IRa.png" width="250" />
+		  <br>
+		  <h3>或許你可以從某個方向下手，如果你貢獻出10點的MP，我就給你一些暗示吧。</h3>
+		  <br>
+		  
+		</center>     
+	   </div>
+	  </div>
+	</div>
+  </div>
+
+<!-- 先知祝福 -->
+
+<div class="modal fade" id="bless">
+	<div class="modal-dialog">
+	 <div class="modal-content">
+	<!-- Header -->
+		<div class="modal-header">
+		  <h3>先知祝福</h3>
+	
+		  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+		</div>
+	<!-- Body -->  
+  
+	  <div class="modal-body">
+  
+		<center>
+		  <img src="https://i.imgur.com/KFf0aoY.png" width="250" />
+		  <br>
+		  <h3>我可以幫你排除一個答案，只是你要貢獻出20點的MP。</h3>
+		  <br>
+		  
+		</center>     
+	   </div>
+	  </div>
+	</div>
+  </div>
+
+<!-- 乾坤挪移 -->
+
+<div class="modal fade" id="skip">
+	<div class="modal-dialog">
+	 <div class="modal-content">
+	<!-- Header -->
+		<div class="modal-header">
+		  <h3>乾坤挪移</h3>
+	
+		  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+		</div>
+	<!-- Body -->  
+  
+	  <div class="modal-body">
+  
+		<center>
+		  <img src="https://i.imgur.com/gCZc12x.png" width="250" />
+		  <br>
+		  <h3>看來這題對你來說太難了，我可以幫你快速傳送到下一關，只是你的HP和MP都只會剩下1點。</h3>
+		  <br>
+		  
+		</center>     
+	   </div>
+	  </div>
+	</div>
+  </div>
 {% endblock %}

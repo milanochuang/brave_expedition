@@ -8,16 +8,51 @@
 
 
 {% block content %} 
-<head>
-    <meta charset="UTF-8">
-    <center>
-    <form method = "post">
-    {% csrf_token %}
-    <button type ="submit", name ="map1", value="map1", class="btn btn-success">MAP 1</button> 
-    <input type="submit" value="Map_2" />
-    <input type="submit" value="Map_3" />
-    </center>
-</form>
-</head>
- {% endblock %}
+
+
+<body> 
+
+    
+    <h2>選擇你要前往的地區</h2>
+    <br>
+    <table border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+        <tbody><tr>
+            <td>
+    <a href="/question/">
+        <input type="image" name="寒冰高原" src="https://i.imgur.com/GAeEFOo.png" onclick="submit()" width="200" border="0">
+        </a>
+        <br>寒冰高原
+        <br>
+    </td>
+    <td> 
+    <a href="/question/">
+       
+            <input type="image" name="德紅沙漠" src="https://i.imgur.com/LEoanFh.png" onclick="submit()" width="200" border="0">
+        </a>
+        <br>德紅沙漠
+    </td>
+    <td>
+        <a href="/question/">
+        <input type="image" name="永夏島" src="https://i.imgur.com/q56Djun.png" onclick="submit()" width="200" border="0">
+        </a>
+        <br>永夏島
+    </td>   
+</tbody></table></tr>
+   {% endblock %}
+
+</body>
 </html>
+<!-- <a href="/question/">
+    <input type="image" name="寒冰高原" src="https://i.imgur.com/GAeEFOo.png" onclick="submit()" width="70" border="0">
+    </a>
+    <br>寒冰高原
+    <br>
+    <a href="/question/">
+    <input type="image" name="德紅沙漠" src="https://i.imgur.com/LEoanFh.png" onclick="submit()" width="70" border="0">
+    </a>
+    <br>德紅沙漠
+    <br>
+    <a href="/question">
+    <input type="image" name="永夏島" src="https://i.imgur.com/q56Djun.png" onclick="submit()" width="70" border="0">
+    </a>
+    <br>永夏島 -->

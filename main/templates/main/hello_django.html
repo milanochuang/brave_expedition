@@ -1,33 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+{% extends 'main/first_page_base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <strong>
-    <center>討厭詭圖鑑：勇者遠征
-    </center>
-    </strong>
-    <br>
-</head>
+
+{% block title %} correct{% endblock %}
+
+
+
+{% block content %} 
+
+
 <body> 
-    <center>
-    <small>「雖然我們無法一起戰鬥，但即使只有我一人，我也要打敗這些惡人！」
+    
+    <small>夜幕低垂，你躡手躡腳地走進了一間木屋…
+    <br>：「坤娜叫我來這邊做什麼…」
+    <br>：「真討厭，萬一被那些傢伙發現…」
+    <br>：「怎麼什麼都沒有？」
+    <br>：「有人在嗎？」
     <br>
-    <br>玩家是楚斯星球上的勇者，透過打敗各地的討厭詭，將他們的資訊記錄在圖鑑上，嘗試找出他們的弱點。
+    <br>突然，牆角的木箱發出微光，你上前打開，看到裡頭放著三樣物品：寶劍、水晶球、箭矢。
+    <br>：「這個是？」
     <br>
-    <br>請選擇職業
+    <br>
     </small>
+    <strong>〖選擇你的職業〗</strong>
+    <tbody><table><tr>
+    <td>
+    <a href="/background/">
+    <input type="image" name="寶劍" src="https://i.imgur.com/yQM6C90.png" onclick="submit()" width="130" border="0">
+    </a>
+    <br><small>    力量的象徵   </small>
     <br>
-   <a href="/background/">
-    <input type="submit" value="鬥士" />
-    </a>
+    </td>
+    <td>
     <a href="/background/">
-    <input type="submit" value="術士" />
+    <input type="image" name="水晶球" src="https://i.imgur.com/EkXJlIp.png" onclick="submit()" width="130" border="0">
     </a>
+    <br><small>    智慧的象徵   </small>
+    <br>
+    </td>
+    <td>
     <a href="/background/">
-    <input type="submit" value="弓箭手" />
+    <input type="image" name="箭矢" src="https://i.imgur.com/meH7jai.png" onclick="submit()" width="130" border="0">
     </a>
-    </center>
+    <br><small>    平衡的象徵   </small>
+    </td>
+
+</tbody></table></tr>
    </body>
-  
+   {% endblock %}
 </html>

@@ -2,7 +2,13 @@
 {% block title%}View List{% endblock%}
 
 {% block content%}
-	<h3>{{ls.name}}</h3>
+<tbody><table><tr>
+	<tb>
+	<h3>找出討厭詭的弱點</h3>
+	<img src="https://i.imgur.com/3q83ccy.png" width="600">
+	<br>
+	</tb>
+	<tb>
 	<form method = "post" action = "#">
 		{% csrf_token %}
 		{% for item in ls.item_set.all %}
@@ -21,5 +27,6 @@
 		{% endfor %}
 		<button type ="submit", name ="save", value="save", class="btn btn-success">決定好了！</button> 
 	</form>
-	
+	</tb>
+</tbody></table></tr>
 {% endblock %}

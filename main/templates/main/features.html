@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<!-- Boostrap 導入程式 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+
+{% extends 'main/base.html' %}
+
+
+{% block title %} correct{% endblock %}
+
+
+
+{% block content %} 
+<b>查看討厭詭的秘密能讓你更加茁壯</b>
+<br>：「已經找到了隱藏的討厭詭了，只是討厭的秘密到底是什麼呢?」
+<br>
+<tbody><table><tr>
+	<td>
+		<a href="#" type="button"  width="500" data-bs-toggle="modal" data-bs-target="#f1">
+			<img src="https://i.imgur.com/izwLENJ.png" width="50">
+		</a>
+		<br>
+	</td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>
+	<a href="#" type="button"  width="500" data-bs-toggle="modal" data-bs-target="#f2">
+		<img src="https://i.imgur.com/izwLENJ.png" width="50">
+	</a>
+	<br>
+</td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>
+	<a href="#" type="button"  width="500" data-bs-toggle="modal" data-bs-target="#f3">
+		<img src="https://i.imgur.com/izwLENJ.png" width="50">
+	</a>
+	<br>	
+</td>
+
+<br>
+
+</tbody></table></tr>
+
+<br>
+<a href="/maps ">
+	<button type = "submit", name = 'next' value= "next" class="btn btn-success" > 繼續冒險 </button>
+</a>
+
+
+
+<!-- 強烈指示　-->
+
+<div class="modal fade" id="f1">
+	<div class="modal-dialog">
+	 <div class="modal-content">
+	<!-- Header -->
+		<div class="modal-header">
+		  <h3>討厭詭的秘密：強烈指示</h3>
+	
+		  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+		</div>
+	<!-- Body -->  
+  
+	  <div class="modal-body">
+  
+		<center>
+		  <img src="https://i.imgur.com/TaKc0lm.png" width="450" />
+		  <br>
+		  <br>你在識破討厭詭的祕密後，更加強大了。<b>(HP+10 MP+10)</b>
+		  
+		</center>     
+	   </div>
+	  </div>
+	</div>
+  </div>
+
+  <!-- 使用聳動言詞　-->
+
+<div class="modal fade" id="f2">
+	<div class="modal-dialog">
+	 <div class="modal-content">
+	<!-- Header -->
+		<div class="modal-header">
+		  <h3>討厭詭的秘密：使用聳動言詞</h3>
+	
+		  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+		</div>
+	<!-- Body -->  
+  
+	  <div class="modal-body">
+  
+		<center>
+		  <img src="https://i.imgur.com/I8KWmWQ.png" width="450" />
+		  <br>
+		  <br>你在識破討厭詭的祕密後，更加強大了。<b>(HP+10 MP+10)</b>
+		  
+		</center>     
+	   </div>
+	  </div>
+	</div>
+  </div>
+
+   <!-- 使用聳動言詞　-->
+
+<div class="modal fade" id="f3">
+	<div class="modal-dialog">
+	 <div class="modal-content">
+	<!-- Header -->
+		<div class="modal-header">
+		  <h3>討厭詭的秘密：強調事件真實發生
+		  </h3>
+	
+		  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+		</div>
+	<!-- Body -->  
+  
+	  <div class="modal-body">
+  
+		<center>
+		  <img src="https://i.imgur.com/rtjHqpX.png" width="450" />
+		  <br>
+		  <br>你在識破討厭詭的祕密後，更加強大了。<b>(HP+10 MP+10)</b>
+		  
+		</center>     
+	   </div>
+	  </div>
+	</div>
+  </div>
+
+  {% endblock %}
+</html>

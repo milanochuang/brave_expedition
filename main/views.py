@@ -21,22 +21,29 @@ def maps(response):
 def question(response):
     
     return render(response,"main/question.html",{})
+def features(response):
+    if response.method =="POST":
+        if response.POST.get("viewfeatures"):
+            return HttpResponseRedirect("/features")
+    else:
+        return render(response,"main/features.html",{})
 
+        
 def index(response, id):
-    ls = ToDoList.objects.get(id=id)
+    ls = ToDoList.objects.get(id="22")
 
     if response.method == "POST":
         if response.POST.get("save"):
-            if response.POST.get("c37") == "clicked":
-                if response.POST.get("c38") == "clicked":
-                    if response.POST.get("c39") != "clicked":
+            if response.POST.get("c37") and response.POST.get("c44") == "clicked":
+                if response.POST.get("c39") and response.POST.get("c43") == "clicked":
+                    if response.POST.get("c38") != "clicked":
                         return HttpResponseRedirect("correct")
                     else:
-                        return HttpResponseRedirect("/incorrect")
+                        return HttpResponseRedirect("/incorrect")               
                 else:
-                    return HttpResponseRedirect("/incorrect")
+                   return HttpResponseRedirect("/incorrect")
             else:
-                return HttpResponseRedirect("incorrect")            
+                return HttpResponseRedirect("/incorrect")            
 
 
     return render(response, "main/list.html",{"ls":ls})

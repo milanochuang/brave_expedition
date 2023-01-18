@@ -6,12 +6,25 @@
 
 
 {% block content %} 
-<h3>恭喜答對！</h3>
-<form method= "post" action = "/correct" class="form-group">
-	{% csrf_token %}
-	<h4>攻下此地！</h4>
-		<div class="input-group-prepend">
-			<button type = "submit", name = 'next' value= "next" class="btn btn-success" > 繼續冒險 </button>
+<h3>太好了，你成功找出隱藏在其中的討厭詭了！</h3>
+
+	<strong>恭喜你蒐集到了<b>長右</b>的圖鑑</strong>
+	<br>
+	<tbody><table><tr>
+	<td >
+		<img src="https://i.imgur.com/SWooMv7.png" width="200">	
+	</td>
+	<td >
+		<br><h6><b>危言聳聽</b></h6>
+		<br><strong>可疑之處：「...會<i>中毒</i>」、「就<i>往生</i>了」。</strong>
+		<br>假訊息中可能會使用聳動言詞，意圖提升資訊中的情感渲染程度，類似的例子例如：「...使動物三代<i>絕種</i>...。」
+		<br>
+	</td>	
+	<br>
+</tbody></table></tr>
+	<br>
+		<a href="/features ">
+			<button type = "submit", name = 'viewfeatures' value= "viewfeatures" class="btn btn-success" > 誰是討厭詭 </button>
 		</div>	
 </form>
 
